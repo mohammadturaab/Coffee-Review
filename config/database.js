@@ -3,9 +3,9 @@ const dbUrl = process.env.DATABASE_URL;
 
 //connect to database
 mongoose.connect(dbUrl, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true
+    // useNewUrlParser: true,
+    // useCreateIndex: true,
+    // useUnifiedTopology: true
 });
 const db = mongoose.connection;
 // database connection event
