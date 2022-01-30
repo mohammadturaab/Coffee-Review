@@ -3,6 +3,7 @@ const dbUrl = process.env.DATABASE_URL;
 
 //connect to database
 mongoose.connect(dbUrl, {
+    // Might need code below for the OAuth
     // useNewUrlParser: true,
     // useCreateIndex: true,
     // useUnifiedTopology: true
