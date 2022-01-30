@@ -7,6 +7,10 @@ const app = express();
 const session = require("express-session");
 const passport = require('passport');
 
+const routes = require('./routes/');
+
+app.use(express.urlencoded({ extended: true }));
+
 app.use(
     session({
         secret: 'CoffeeIsLife!',
@@ -15,13 +19,14 @@ app.use(
     })
 );
 
+
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+app.use('/', routes.googleAuth);
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('You are not logged in')
 });
 
 const port = 3000;
