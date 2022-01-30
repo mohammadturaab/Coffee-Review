@@ -1,7 +1,11 @@
 const mongoose =  require('mongoose');
 const Schema = mongoose = new Schema;
 
-
+const reviewSchema = new mongoose.Schema({
+    text: String
+},{
+    timestamps: true,
+});
 
 const userSchema = new Schema ({
     name: { type: String, require: true},
