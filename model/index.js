@@ -19,3 +19,9 @@ const userSchema = new Schema ({
 });
 
 module.exports = mongoose.model('User', userSchema);
+
+const ProductsSchema = new Schema({
+    name: {type: String, required: true},
+    description: {type: String,},
+    image: {String}
+})
