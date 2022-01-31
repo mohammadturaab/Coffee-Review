@@ -20,8 +20,10 @@ const userSchema = new Schema ({
 
 module.exports = mongoose.model('User', userSchema);
 
-const ProductsSchema = new Schema({
+const productSchema = new Schema({
     name: {type: String, required: true},
     description: {type: String,},
     image: {String}
 })
+
+module.exports = mongoose.model('Products', productSchema);

@@ -1,4 +1,4 @@
-const Products = require('../models/students/products');
+const Products = require('../models/products');
 
 function index (req, res) {
     Products.find({}, function(err, products){
