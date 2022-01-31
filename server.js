@@ -12,7 +12,7 @@ const req = require('express/lib/request');
 const passport = require('passport');
 
 const routes = require('./routes/');
-const productRoutes = require('./routes/products')
+const productRoutes = require('./routes/products.js');
 
 app.use(express.urlencoded({ extended: true }));
 
