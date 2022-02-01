@@ -1,3 +1,3 @@
-const Products = require('./models/index');
+const Products = require('./index');
 
 const productDB = require('./populateProducts');

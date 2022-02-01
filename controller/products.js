@@ -1,9 +1,14 @@
-const Products = require('../models/products');
+const Product = require('../model/index');
+
+module.exports = {
+    index,
+};
 
 function index (req, res) {
-    Products.find({}, function(err, products){
+    Product.find({}, function(err, products){
         res.render('products/index',{
             products
         })
     });
 }
+

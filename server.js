@@ -12,7 +12,7 @@ const req = require('express/lib/request');
 const passport = require('passport');
 
 const routes = require('./routes/');
-const productRoutes = require('./routes/products.js');
+const productRoutes = require('./routes/products');
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -29,6 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', routes.googleAuth);
+app.use('/', productRoutes);
 
 app.get('/', (req, res) => {
     res.send('You are not logged in')
