@@ -28,13 +28,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-
 app.use('/', routes.googleAuth);
 
 app.get('/', (req, res) => {
     res.send('You are not logged in')
 });
+
+app.set('view engine', 'ejs');
 
 const PORT = process.env.PORT || 3000;
 
