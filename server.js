@@ -14,6 +14,7 @@ const passport = require('passport');
 const routes = require('./routes/');
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 app.use(
     session({
@@ -26,6 +27,8 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+
 
 app.use('/', routes.googleAuth);
 
