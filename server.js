@@ -29,7 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', routes.googleAuth);
-app.use('/', productRoutes);
+app.use('/products', productRoutes);
 
 app.get('/', (req, res) => {
     res.send('You are not logged in')
