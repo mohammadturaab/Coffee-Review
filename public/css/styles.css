@@ -6,3 +6,9 @@
     --color-accent: #f7a072;
     --color-border: #fff;
 }
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
