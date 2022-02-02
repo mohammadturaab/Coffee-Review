@@ -116,3 +116,25 @@ a:hover{
     color: var(--color-accent);
     transition: color 0.15s;
 }
+
+.card{
+    border: 1px solid black;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card--container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card__image{
+    border: 1px solid tomato;
+    height: 90%;
+    width: 30%;
+}
