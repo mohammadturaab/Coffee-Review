@@ -89,15 +89,30 @@ a:hover{
 .video--content{
     display: flex;
     flex-direction: column;
+    align-items: center;
     color: var(--color-border);
     margin-top: 0;
     position: absolute;
-    top: 50%;
-    left: 40%;
+    top: 30%;
+    left: 10%;
 }
 
 .parallax--effect-video video{ 
     position: absolute;
     width: 100%;
     z-index: -999;
+}
+
+.video__button{
+    width: 30%;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 20px;
+    background-color: var(--color-secondary);
+    color: var(--color-border)
+}
+
+.video__button:hover{
+    color: var(--color-accent);
+    transition: color 0.15s;
 }
