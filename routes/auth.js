@@ -14,7 +14,7 @@ router.get("/failed", (req, res) => {
 })
 router.get("/success", isLoggedIn, (req, res) => {
     console.log(req.user);
-    res.send(`Welcome ${req.user.displayName}`);
+    res.send(`Welcome ${req.user.name}`);
 })
 
 router.get('/auth/google',
