@@ -41,7 +41,7 @@ h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 6rem;
+    padding: 1rem 6rem;
     background-color: var(--color-primary);
 }
 
@@ -76,4 +76,43 @@ a:hover{
     color: var(--color-accent);
     transition: color var(--color-accent);
     cursor: pointer;
+}
+
+.parallax--effect-video{ 
+    /* padding-bottom: 50px; */
+    height: 60vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.video--content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-border);
+    margin-top: 0;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.parallax--effect-video video{ 
+    position: absolute;
+    width: 100%;
+    z-index: -999;
+}
+
+.video__button{
+    width: 30%;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 20px;
+    background-color: var(--color-secondary);
+    color: var(--color-border)
+}
+
+.video__button:hover{
+    color: var(--color-accent);
+    transition: color 0.15s;
 }
