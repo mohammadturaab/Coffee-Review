@@ -2,7 +2,8 @@ const mongoose =  require('mongoose');
 const Schema = mongoose.Schema;
 
 const reviewSchema = new mongoose.Schema({
-    text: String
+    text: String,
+    rating: {type: Number, min: 1, max: 5, default: 5}
 },{
     timestamps: true,
 });
@@ -19,3 +20,11 @@ const userSchema = new Schema ({
 });
 
 module.exports = mongoose.model('User', userSchema);
+
+// const productSchema = new Schema({
+//     name: {type: String, required: true},
+//     description: {type: String,},
+//     image: {String}
+// })
+
+// module.exports = mongoose.model('Products', productSchema);
