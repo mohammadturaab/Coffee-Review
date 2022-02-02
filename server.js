@@ -6,6 +6,7 @@ require('./config/passport');
 
 
 const app = express();
+app.set('view engine', 'ejs');
 
 const session = require("express-session");
 const req = require('express/lib/request');

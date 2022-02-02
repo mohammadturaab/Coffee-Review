@@ -1,14 +1,15 @@
-const Product = require('../model/index');
+const Product = require('../model/products');
 
-module.exports = {
-    index,
-};
 
-function index (req, res) {
-    Product.find({}, function(err, products){
-        res.render('products/index',{
-            products
-        })
-    });
+function index(req, res){
+    Product.find({}, function(err, product){
+        if (err) res.send(err);
+
+        const context = { product: product}
+        res.render('products/index');
+    })
 }
 
+module.exports = {
+    index
+};
