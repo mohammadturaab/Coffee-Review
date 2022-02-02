@@ -124,17 +124,45 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3rem;
 }
 
-.card--container{
+.card--section{
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
-.card__image{
+.card--container{
     border: 1px solid tomato;
     height: 90%;
     width: 30%;
+}
+
+.card__image{
+    border: 1px solid seagreen;
+    height: 80%;
+    width: 100%;
+}
+
+.card__img-first{
+    background: url(../images/coffeeAndPine.jpg);
+    background-size: cover;
+}
+
+.card__img-second{
+    background: url(../images/espressoShot.jpg);
+    background-size: cover;
+}
+
+.card__img-third{
+    background: url(../images/coffeeWithMilk.jpg);
+    background-size: cover;
+}
+
+.card__text{
+    border: 1px solid purple;
+    height: 20%;
+    width: 100%;
 }
