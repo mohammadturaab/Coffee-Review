@@ -12,7 +12,9 @@ const session = require("express-session");
 const passport = require('passport');
 
 const routes = require('./routes/');
+const homeRoutes = require('./routes/home')
 const productRoutes = require('./routes/products');
+const googleAuth = require('./routes/auth');
 
 app.use(express.urlencoded({ extended: true }));
 app.use('/public', express.static('public'));
@@ -30,13 +32,12 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-app.use('/', routes.googleAuth);
+app.use('/', googleAuth);
+app.use('/', homeRoutes);
 app.use('/products', productRoutes);
 
-app.use('/', routes.googleAuth);
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('home');
 });
 
 
