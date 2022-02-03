@@ -7,6 +7,7 @@ function index(req, res){
         res.render('products/index',{
             product,
             products: req.product,
+            user: req.user
         } );
 
     })
