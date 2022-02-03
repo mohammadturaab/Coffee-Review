@@ -11,7 +11,6 @@ app.set('view engine', 'ejs');
 const session = require("express-session");
 const passport = require('passport');
 
-const routes = require('./routes/');
 const homeRoutes = require('./routes/home')
 const productRoutes = require('./routes/products');
 const googleAuth = require('./routes/auth');
