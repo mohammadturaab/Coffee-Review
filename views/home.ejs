@@ -1,27 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../public/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
+<%- include('partials/header.ejs')  %>
     <title>Reviews</title>
 </head>
 <body>
-    <nav class="nav">
-        <a class="nav__title" href="#">Coffee Reviews</a>
-        <ul class="list nav__list">
-            <li class="nav__item nav__list-item"><a href="#">Home</a></li>
-            <li class="nav__item nav__list-item"><a href="#">Products</a></li>
-            <li class="nav__item nav__list-item"><a href="#">Review</a></li>
-            <li class="nav__item nav__list-item"><a href="#">Sign In</a></li>
-        </ul>
-    </nav>
+    <%- include('partials/nav.ejs')  %>
     <div class="parallax--effect-video">
         <video autoplay muted loop>
             <source src="../public/images/coffeeSpin.mp4" type="video/mp4">
