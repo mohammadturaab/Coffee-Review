@@ -47,6 +47,9 @@ h3 {
     align-items: center;
     padding: 1rem 6rem;
     background-color: var(--color-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .nav__title {
@@ -189,6 +192,7 @@ a:hover {
     background-size: cover;
     background-position: center center;
     top: 100px;
+    margin-top: 0;
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -206,10 +210,12 @@ a:hover {
     opacity: -7;
     z-index: -1;
 }
-.banner-container h2{
+.banner-container h1{
     padding-top: 8%;
     font-size: 80px;
+    text-align: center;
     color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 .banner--text {
     width: 100%;
@@ -218,17 +224,25 @@ a:hover {
     background-color: #fff;
     top: 600px;
 } 
-.banner--text h2 {
+.banner--text h1 {
     font-size: 40px;
     margin: 0;
     padding-top: 0;
     letter-spacing: 4px;
+    
 } 
 
 .content-area{
     position: relative;
     background-color: #fff;
     top: 600px;
+}
+.content-area h2{
+    position: relative;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .grid {
