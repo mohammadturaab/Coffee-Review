@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100&display=swap');
+
 :root {
     --color-primary: #544b3d;
     --color-secondary: #4e6e58;
@@ -205,15 +207,45 @@ a:hover {
     color: var(--color-border);
 }
 
-.grid { 
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     align-items: stretch;
-    margin: 0 30px;
-    }
-  .grid img {
+    margin: 0 30px 10px 30px;
+}
+
+.grid img {
     border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
     max-width: 100%;
+}
+
+.item--name {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.item--description {
+    font-family: 'Poppins', sans-serif;
+}
+
+.item--rating {
+    font-family: 'Poppins', sans-serif;
+}
+
+.item--review--button {
+    background-color: #4e6e58;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+.item--review--button:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 5px 3px 1px #544b3d;
+    color: #fff;
   }
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif; */
