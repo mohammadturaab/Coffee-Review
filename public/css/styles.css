@@ -377,3 +377,7 @@ font-family: 'Poppins', sans-serif; */
     color: var(--color-border);
     font-weight: 600;
 }
+
+.nav--footer{
+    height: 200px;
+}
