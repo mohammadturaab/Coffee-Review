@@ -302,3 +302,15 @@ font-family: 'Poppins', sans-serif; */
     padding: 3rem 0;
 }
 
+.advertise h2{
+    margin-bottom: 3rem;
+}
+
+.advertise h3{
+    margin-bottom: 0;
+}
+
+.advertise h4{
+    margin: 3rem 0;
+    font-size: 2.1rem;
+}
