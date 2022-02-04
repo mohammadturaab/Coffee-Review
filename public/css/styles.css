@@ -329,3 +329,8 @@ font-family: 'Poppins', sans-serif; */
     display:inline-block;
     opacity: 0.6;
  }
+
+ .wrapper__word{
+    font-size: 2rem;
+    color: var(--color-primary);
+}
