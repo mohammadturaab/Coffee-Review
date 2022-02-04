@@ -318,3 +318,14 @@ font-family: 'Poppins', sans-serif; */
 .desc--wrapper{
     display: flex;
 }
+
+.bullet:before {
+    content:"\A";
+    width: 1rem;
+    height:1rem;
+    border-radius:50%;
+    background: var(--color-secondary);
+    margin: 0 3rem;
+    display:inline-block;
+    opacity: 0.6;
+ }
