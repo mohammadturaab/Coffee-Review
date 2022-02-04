@@ -297,5 +297,8 @@ font-family: 'Poppins', sans-serif; */
     align-items: center;
     background-color: rgb(247,160,114, 20%);
     color: var(--color-primary);
+    border-radius: 10%;
+    margin: 5rem 8rem;
+    padding: 3rem 0;
 }
 
