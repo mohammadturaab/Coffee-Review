@@ -180,6 +180,9 @@ a:hover {
 .card__text {
     height: 20%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card__text h3 {
