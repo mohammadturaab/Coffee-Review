@@ -349,3 +349,15 @@ font-family: 'Poppins', sans-serif; */
     margin-bottom: 3rem;
 }
 
+.btm__img__container{
+    background: url(../images/beansOnTable.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 250px;
+    width: 90%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
