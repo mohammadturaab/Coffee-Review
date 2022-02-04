@@ -138,6 +138,8 @@ a:hover {
 
 .card h2 {
     color: var(--color-primary);
+    margin: 3rem 0 3rem 0;
+    padding-bottom: 2rem;
 }
 
 .card--section {
