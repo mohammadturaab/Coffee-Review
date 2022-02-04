@@ -290,3 +290,10 @@ a:hover {
 
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Poppins', sans-serif; */
+
+.advertise{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
