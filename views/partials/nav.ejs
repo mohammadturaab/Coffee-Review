@@ -4,6 +4,12 @@
         <li class="nav__item nav__list-item"><a href="/">Home</a></li>
         <li class="nav__item nav__list-item"><a href="/products">Products</a></li>
         <li class="nav__item nav__list-item"><a href="/reviews">Review</a></li>
-        <li class="nav__item nav__list-item"><a href="/auth/google">Sign In</a></li>
+        <li class="nav__item nav__list-item">
+            <% if (user){ %>
+                <a href="/logout">Log Out</a>
+            <% } else { %>
+                <a href="/auth/google">Sign In</a>
+            <% } %>
+        </li>
     </ul>
 </nav>

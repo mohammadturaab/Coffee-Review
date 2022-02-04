@@ -11,7 +11,6 @@ app.set('view engine', 'ejs');
 const session = require("express-session");
 const passport = require('passport');
 
-const routes = require('./routes/');
 const homeRoutes = require('./routes/home')
 const productRoutes = require('./routes/products');
 const googleAuth = require('./routes/auth');
@@ -35,10 +34,6 @@ app.use(passport.session());
 app.use('/', googleAuth);
 app.use('/', homeRoutes);
 app.use('/products', productRoutes);
-
-app.get('/', (req, res) => {
-    res.render('home');
-});
 
 
 const PORT = process.env.PORT || 3000;
