@@ -264,14 +264,17 @@ a:hover {
 
 .item--name {
     font-family: 'Montserrat', sans-serif;
+    margin-top: 5px;
 }
 
 .item--description {
     font-family: 'Montserrat', sans-serif;
+    margin-top: 5px;
 }
 
 .item--rating {
     font-family: 'Montserrat', sans-serif;
+    margin-top: 5px;
 }
 
 .item--review--button {
@@ -299,7 +302,7 @@ a:hover {
 }
 
 .product--rating{
-    
+    font-family: 'Poppins', sans-serif;
 }
 
 /* font-family: 'Montserrat', sans-serif;
