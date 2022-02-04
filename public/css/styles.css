@@ -48,6 +48,9 @@ h3 {
     align-items: center;
     padding: 1rem 6rem;
     background-color: var(--color-primary);
+}
+
+.nav__header{
     position: sticky;
     top: 0;
     z-index: 1;
@@ -138,6 +141,8 @@ a:hover {
 
 .card h2 {
     color: var(--color-primary);
+    margin: 3rem 0 3rem 0;
+    padding-bottom: 2rem;
 }
 
 .card--section {
@@ -178,6 +183,9 @@ a:hover {
 .card__text {
     height: 20%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card__text h3 {
@@ -290,3 +298,86 @@ a:hover {
 
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Poppins', sans-serif; */
+
+.advertise{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(247,160,114, 20%);
+    color: var(--color-primary);
+    border-radius: 10%;
+    margin: 5rem 8rem;
+    padding: 3rem 0;
+}
+
+.advertise h2{
+    margin-bottom: 3rem;
+}
+
+.advertise h3{
+    margin-bottom: 0;
+}
+
+.advertise h4{
+    margin: 3rem 0;
+    font-size: 2.1rem;
+}
+
+.desc--wrapper{
+    display: flex;
+}
+
+.bullet:before {
+    content:"\A";
+    width: 1rem;
+    height:1rem;
+    border-radius:50%;
+    background: var(--color-secondary);
+    margin: 0 3rem;
+    display:inline-block;
+    opacity: 0.6;
+ }
+
+ .wrapper__word{
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+.btm--img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.btm__img__container{
+    background: url(../images/beansOnTable.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 250px;
+    width: 90%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer li, .footer__item h3{
+    margin-bottom: 1rem;
+}
+
+.footer__item{
+    font-size: 2.2rem;
+    color: var(--color-border);
+    font-weight: 600;
+}
+
+.nav--footer{
+    height: 200px;
+}
