@@ -267,15 +267,16 @@ a:hover {
 }
 
 .item--description {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .item--rating {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .item--review--button {
     background-color: #4e6e58;
+    margin-top: 10px;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     -webkit-transition: ease-out 0.4s;
@@ -287,6 +288,19 @@ a:hover {
     box-shadow: 1px 5px 3px 1px #544b3d;
     color: #fff;
   }
+.product--name{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+}
+
+.product--description{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.product--rating{
+    
+}
 
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Poppins', sans-serif; */
