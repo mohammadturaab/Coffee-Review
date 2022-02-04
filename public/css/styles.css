@@ -367,3 +367,13 @@ font-family: 'Poppins', sans-serif; */
     flex-direction: column;
     align-items: flex-start;
 }
+
+.footer li, .footer__item h3{
+    margin-bottom: 1rem;
+}
+
+.footer__item{
+    font-size: 2.2rem;
+    color: var(--color-border);
+    font-weight: 600;
+}
