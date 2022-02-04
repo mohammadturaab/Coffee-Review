@@ -48,6 +48,9 @@ h3 {
     align-items: center;
     padding: 1rem 6rem;
     background-color: var(--color-primary);
+}
+
+.nav__header{
     position: sticky;
     top: 0;
     z-index: 1;
@@ -339,3 +342,10 @@ font-family: 'Poppins', sans-serif; */
     font-size: 2rem;
     color: var(--color-primary);
 }
+
+.btm--img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
