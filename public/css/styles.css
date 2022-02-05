@@ -50,7 +50,7 @@ h3 {
     background-color: var(--color-primary);
 }
 
-.nav__header{
+.nav__header {
     position: sticky;
     top: 0;
     z-index: 1;
@@ -208,7 +208,7 @@ a:hover {
     position: fixed;
 }
 
-.banner-container:after{
+.banner-container:after {
     content: "";
     position: absolute;
     top: 0;
@@ -220,34 +220,38 @@ a:hover {
     opacity: -7;
     z-index: -1;
 }
-.banner-container h1{
+
+.banner-container h1 {
     padding-top: 8%;
     font-size: 80px;
     text-align: center;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
 }
+
 .banner--text {
     width: 100%;
     height: 800px;
     position: relative;
     background-color: #fff;
     top: 600px;
-} 
+}
+
 .banner--text h1 {
     font-size: 40px;
     margin: 0;
     padding-top: 0;
     letter-spacing: 4px;
-    
-} 
 
-.content-area{
+}
+
+.content-area {
     position: relative;
     background-color: #fff;
-    top: 600px;
+    top: 500px;
 }
-.content-area h2{
+
+.content-area h2 {
     position: relative;
     color: black;
     text-align: center;
@@ -260,8 +264,7 @@ a:hover {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     align-items: stretch;
-    margin: 0 60px;
-   
+    margin: 0px 30px;
 }
 
 .grid img {
@@ -296,80 +299,85 @@ a:hover {
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
+    height: 30px;
+    width: 70px;
+    margin-bottom: 50px;
 }
+
 .item--review--button:hover {
     transform: scale(1.1);
     box-shadow: 1px 5px 3px 1px #544b3d;
     color: #fff;
-  }
-.product--name{
+}
+
+.product--name {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
 }
 
-.product--description{
+.product--description {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }
 
-.product--rating{
+.product--rating {
     font-family: 'Poppins', sans-serif;
 }
 
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Poppins', sans-serif; */
 
-.advertise{
+.advertise {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(247,160,114, 20%);
+    background-color: rgb(247, 160, 114, 20%);
     color: var(--color-primary);
     border-radius: 10%;
     margin: 5rem 8rem;
     padding: 3rem 0;
 }
 
-.advertise h2{
+.advertise h2 {
     margin-bottom: 3rem;
 }
 
-.advertise h3{
+.advertise h3 {
     margin-bottom: 0;
 }
 
-.advertise h4{
+.advertise h4 {
     margin: 3rem 0;
     font-size: 2.1rem;
 }
 
-.desc--wrapper{
+.desc--wrapper {
     display: flex;
 }
 
 .bullet:before {
-    content:"\A";
+    content: "\A";
     width: 1rem;
-    height:1rem;
-    border-radius:50%;
+    height: 1rem;
+    border-radius: 50%;
     background: var(--color-secondary);
     margin: 0 3rem;
-    display:inline-block;
+    display: inline-block;
     opacity: 0.6;
- }
+}
 
- .wrapper__word{
+.wrapper__word {
     font-size: 2rem;
     color: var(--color-primary);
 }
 
-.btm--img{
+.btm--img {
     display: flex;
     justify-content: center;
     margin-bottom: 3rem;
 }
 
-.btm__img__container{
+.btm__img__container {
     background: url(../images/beansOnTable.jpg);
     background-size: cover;
     background-position: center center;
@@ -382,22 +390,24 @@ font-family: 'Poppins', sans-serif; */
     z-index: 1;
 }
 
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.footer li, .footer__item h3{
+.footer li,
+.footer__item h3 {
     margin-bottom: 1rem;
 }
 
-.footer__item{
+.footer__item {
     font-size: 2.2rem;
     color: var(--color-border);
     font-weight: 600;
 }
 
-.nav--footer{
+.nav--footer {
+    position: relative;
     height: 200px;
 }

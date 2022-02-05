@@ -10,70 +10,19 @@
     <div class="content-area">
         <h2>Products</h2>
         <div class="grid">
-            <div>
-                <img src=<%= product[0].image %>  alt="">
-                <h4 class="item--name">Name:  <span class = "product--name"><%= product[0].name %></span></h4>
-                <p class="item--description">Description: <span class = "product--description"><%= product[0].description %></span></p>
+        <% for (let i = 0; i < product.length; i++) { %>
+            <div *ngFor="let row of data">
+                <img src=<%= product[i].image %> alt="">
+                <h4 class="item--name">Name: <span class="product--name"><%= product[i].name %></span></h4>
+                <p class="item--description">Description: <span
+                        class="product--description"><%= product[i].description %></span></p>
                 <h5 class="item--rating">Rating: <span class="product--rating">TBD</span></h5>
-                <button class="item--review--button">Review</button>
+                <button class="item--review--button"><a href="/reviews/<%= product[i].name %>">Review</a></button>
             </div>
-            <div>
-                <img src=<%= product[1].image %> alt="">
-                <h4 class="item--name">Name:  <span class = "product--name"><%= product[1].name %></span></h4>
-                <p class="item--description">Description: <span class = "product--description"><%= product[1].description %></span></p>
-                <h5 class="item--rating">Rating: <span class="product--rating">TBD</span></h5>
-                <button class="item--review--button">Review</button>
-            </div>
-            <div>
-                <img src=<%= product[2].image %> alt="">
-                <h4 class="item--name">Name:  <span class = "product--name"><%= product[2].name %></span></h4>
-                <p class="item--description">Description: <span class = "product--description"><%= product[2].description %></span></p>
-                <h5 class="item--rating">Rating: <span class="product--rating">TBD</span></h5>
-                <button class="item--review--button">Review</button>
-            </div>
-            <div>
-                <img src=<%= product[3].image %> alt="">
-                <h4 class="item--name">Name:  <span class = "product--name"><%= product[3].name %></span></h4>
-                <p class="item--description">Description: <span class = "product--description"><%= product[3].description %></span></p>
-                <h5 class="item--rating">Rating: <span class="product--rating">TBD</span></h5>
-                <button class="item--review--button">Review</button>
-            </div>
-            <div>
-                <img src=<%= product[4].image %> alt="">
-                <h4 class="item--name">Name:  <span class = "product--name"><%= product[4].name %></span></h4>
-                <p class="item--description">Description: <span class = "product--description"><%= product[4].description %></span></p>
-                <h5 class="item--rating">Rating: <span class="product--rating">TBD</span></h5>
-                <button class="item--review--button">Review</button>
-            </div>
-            <div>
-                <img src=<%= product[5].image %> alt="">
-                <h4 class="item--name">Name:  <span class = "product--name"><%= product[5].name %></span></h4>
-                <p class="item--description">Description: <span class = "product--description"><%= product[5].description %></span></p>
-                <h5 class="item--rating">Rating: <span class="product--rating">TBD</span></h5>
-                <button class="item--review--button">Review</button>
-            </div>
-            <div>
-                <img src=<%= product[6].image %> alt="">
-                <h4 class="item--name">Name:  <span class = "product--name"><%= product[6].name %></span></h4>
-                <p class="item--description">Description: <span class = "product--description"><%= product[6].description %></span></p>
-                <h5 class="item--rating">Rating: <span class="product--rating">TBD</span></h5>
-                <button class="item--review--button">Review</button>
-            </div>
-            <div>
-                <img src=<%= product[7].image %> alt="">
-                <h4 class="item--name">Name:  <span class = "product--name"><%= product[7].name %></span></h4>
-                <p class="item--description">Description: <span class = "product--description"><%= product[7].description %></span></p>
-                <h5 class="item--rating">Rating: <span class="product--rating">TBD</span></h5>
-                <button class="item--review--button">Review</button>
-            </div>
-            <div>
-                <img src=<%= product[8].image %> alt="">
-                <h4 class="item--name">Name:  <span class = "product--name"><%= product[8].name %></span></h4>
-                <p class="item--description">Description: <span class = "product--description"><%= product[8].description %></span></p>
-                <h5 class="item--rating">Rating: <span class="product--rating">TBD</span></h5>
-                <button class="item--review--button">Review</button>
-            </div>
-        </div>
+        <% } %>
+    </div>
+    <div>
+        <%- include('../partials/footer.ejs')  %>
     </div>
 </body>
 
