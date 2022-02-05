@@ -399,5 +399,6 @@ font-family: 'Poppins', sans-serif; */
 }
 
 .nav--footer{
+    position: relative;
     height: 200px;
 }
