@@ -1,0 +1,23 @@
+<%- include('../partials/header.ejs')  %>
+    <title>Review Page</title>
+</head>
+<body>
+    <%- include('../partials/nav.ejs')  %>
+    <h2><%= product.name %></h2>
+    <form action="/:id" method="POST">
+        <div>
+            <label for="name">Name (3 to 10 characters)</label>
+            <input type="text" id="name" name="name" required minlength="3" maxlength="10" size="12">
+            <label for="rating"></label>
+            <select name="rating" id="rating">
+                <% for (let i = 1; i <= 5; i++){ %>
+                    <option value="<%= i %>"><%= i %></option>
+                <% }%>
+            </select>
+        </div>
+        <div>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+    </form>
+</body>
+</html>
