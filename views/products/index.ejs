@@ -13,13 +13,16 @@
         <% for (let i = 0; i < product.length; i++) { %>
             <div *ngFor="let row of data">
                 <img src=<%= product[i].image %> alt="">
-                <h4 class="item--name grid-item">Name: <span class="product--name"><%= product[i].name %></span></h4>
-                <p class="item--description grid-item">Description: <span
+                <h4 class="item--name">Name: <span class="product--name"><%= product[i].name %></span></h4>
+                <p class="item--description">Description: <span
                         class="product--description"><%= product[i].description %></span></p>
-                <h5 class="item--rating grid-item">Rating: <span class="product--rating">TBD</span></h5>
-                <button class="item--review--button grid-item"><a href="/products/<%= product[i].name %>">Review</a></button>
+                <h5 class="item--rating">Rating: <span class="product--rating">TBD</span></h5>
+                <button class="item--review--button"><a href="/products/<%= product[i].name %>">Review</a></button>
             </div>
         <% } %>
+    </div>
+    <div>
+        <%- include('../partials/footer.ejs')  %>
     </div>
 </body>
 
