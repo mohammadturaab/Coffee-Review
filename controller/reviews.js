@@ -7,7 +7,6 @@ function displayReviewPage(req, res){
     Product.find({}, (err, product) => {
         if(err) res.send(err);
         Review.find({}, (err, reviewFound) => {
-            console.log(reviewFound);
             if(err) res.send(err);
             res.render('products/reviews', {
                 product,
@@ -52,8 +51,16 @@ function postReview(req, res){
     });
 }
 
+function destroy(req, res) {
+    Review.findByIdAndRemove(req.params.id, (err, deleteReview) => {
+        if (err) res.send(err);
+        res.redirect(`/reviews/`);
+    })
+}
+
 module.exports = {
     displayReviewPage,
     displaySingleReview,
-    postReview
+    postReview,
+    destroy
 }

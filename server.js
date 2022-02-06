@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-
+const methodOverride = require('method-override');
 require('./config/database');
 require('./config/passport');
 
@@ -18,7 +18,7 @@ const googleAuth = require('./routes/auth');
 
 app.use(express.urlencoded({ extended: true }));
 app.use('/public', express.static('public'));
-
+app.use(methodOverride('_method'));
 
 app.use(
     session({

@@ -1,31 +1,33 @@
 <%- include('../partials/header.ejs')  %>
-    <title>Review Page</title>
+<title>Review Page</title>
 </head>
+
 <body>
     <%- include('../partials/nav.ejs')  %>
     <h2><%= product.name %></h2>
     <% if(reviewFound){ %>
-        <% for(let i = 0; i < reviewFound.length; i++) { %>
-            <p>Review: <%= reviewFound[i].text %></p>
+    <% for(let i = 0; i < reviewFound.length; i++) { %>
+    <p>Review: <%= reviewFound[i].text %></p>
+    <form action="/reviews/<%= reviewFound[i]._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete"/>
         <% } %>
-    <% } %>
-    
-
-    <form action="/reviews/<%= product._id %>" method="POST">
-        <div>
-            <label for="name">Name (3 to 10 characters)</label>
-            <input type="text" id="name" name="name" required minlength="3" maxlength="10" size="12">
-            <label for="rating">Rating</label>
-            <select name="rating" id="rating">
-                <% for (let i = 1; i <= 5; i++){ %>
+        <% } %>
+        <form action="/reviews/<%= product._id %>" method="POST">
+            <div>
+                <label for="name">Name (3 to 10 characters)</label>
+                <input type="text" id="name" name="name" maxlength="10" size="12">
+                <label for="rating">Rating</label>
+                <select name="rating" id="rating">
+                    <% for (let i = 1; i <= 5; i++){ %>
                     <option value="<%= i %>"><%= i %></option>
-                <% }%>
-            </select>
-        </div>
-        <div>
-            <textarea name="reviewInput" id="reviewInput" cols="30" rows="10"></textarea>
-        </div>
-        <button type="submit">Submit</button>
-    </form>
+                    <% }%>
+                </select>
+            </div>
+            <div>
+                <textarea name="reviewInput" id="reviewInput" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
 </body>
+
 </html>
