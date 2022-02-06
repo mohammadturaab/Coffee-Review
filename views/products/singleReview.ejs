@@ -7,11 +7,9 @@
     <% if(reviewFound){ %>
         <% for(let i = 0; i < reviewFound.length; i++) { %>
             <p>Review: <%= reviewFound[i].text %></p>
+            <button type="delete">Delete Post</button>
         <% } %>
     <% } %>
-    <h3>Delete Review</h3>
-
-    <h1>After Review</h1>
     <form action="/reviews/<%= product._id %>" method="POST">
         <div>
             <label for="name">Name (3 to 10 characters)</label>
