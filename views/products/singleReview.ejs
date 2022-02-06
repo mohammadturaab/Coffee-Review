@@ -6,7 +6,8 @@
     <h2><%= product.name %></h2>
     <% if(reviewFound){ %>
         <% for(let i = 0; i < reviewFound.length; i++) { %>
-            <p>Review: <%= reviewFound[i].text %></p>
+                <p>Review: <%= reviewFound[i].text %></p>
+                <a href="/reviews/<%= product._id %>/<%= reviewFound[i]._id %>/edit"><button>Update</button></a>
         <% } %>
     <% } %>
     
