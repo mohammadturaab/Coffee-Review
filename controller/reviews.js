@@ -7,14 +7,13 @@ function displayReviewPage(req, res){
     Product.find({}, (err, product) => {
         if(err) res.send(err);
         Review.find({}, (err, reviewFound) => {
-            console.log(reviewFound);
             if(err) res.send(err);
             res.render('products/reviews', {
                 product,
                 products: req.product,
                 user: req.user,
                 reviewFound
-            });     
+            });
         })
     });
 }
@@ -52,8 +51,35 @@ function postReview(req, res){
     });
 }
 
+function updateReview(req, res){
+        Review.findByIdAndUpdate(req.params.id, 
+            {
+                $set: {
+                    text: req.body.reviewInput,
+                    rating: req.body.rating
+                }
+            }, 
+            {new: true}, 
+            (err, reviewFound) => {
+            if(err) res.send(err);
+            res.redirect(`/reviews/${reviewFound.product}`);
+        });
+}
+
+function editReview(req, res){
+        Review.findById(req.params.id, (err, reviewFound) => {
+            if(err) res.send(err);
+            res.render('products/updateReviews', {
+                user: req.user,
+                reviewFound
+            });
+        });
+}
+
 module.exports = {
     displayReviewPage,
     displaySingleReview,
-    postReview
+    postReview,
+    editReview,
+    updateReview
 }
