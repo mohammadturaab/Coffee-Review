@@ -20,7 +20,7 @@ const googleAuth = require('./routes/auth');
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use('/public', express.static('public'));
-
+app.use(methodOverride('_method'));
 
 app.use(
     session({

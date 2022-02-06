@@ -1,7 +1,10 @@
 const router = require('express').Router();
 const ctrl = require('../controller/reviews');
 
+
+
 router.get('/', ctrl.displayReviewPage);
+
 
 router.get('/:id', ctrl.displaySingleReview);
 
@@ -11,5 +14,6 @@ router.post('/:id', ctrl.postReview);
 
 router.put('/:id/:id', ctrl.updateReview);
 
+router.delete("/:id", ctrl.destroy);
 
 module.exports = router;

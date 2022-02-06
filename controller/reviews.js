@@ -74,6 +74,11 @@ function editReview(req, res){
                 reviewFound
             });
         });
+function destroy(req, res) {
+    Review.findByIdAndRemove(req.params.id, (err, deleteReview) => {
+        if (err) res.send(err);
+        res.redirect(`/reviews/`);
+    })
 }
 
 module.exports = {
@@ -82,4 +87,5 @@ module.exports = {
     postReview,
     editReview,
     updateReview
+    destroy
 }
