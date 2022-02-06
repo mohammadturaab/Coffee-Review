@@ -1,0 +1,21 @@
+<%- include('../partials/header.ejs')  %>
+    <title>Review Page</title>
+</head>
+<body>
+    <%- include('../partials/nav.ejs')  %>
+    <h1>Hello there</h1>
+    <div>
+        <!-- Find all products with at least one review and store it -->
+        <% for(let i = 0; i < product.length; i++){ %>
+            <% if(product[i].reviews.length > 0){ %>
+                    <p> <%= product[i].name %></p>
+                    <% for(let j = 0; j < reviewFound.length; j++){ %>
+                            <% if(product[i].reviews.includes(reviewFound[j]._id)){ %>
+                                    <p>-<%= reviewFound[j].text %></p>
+                            <% } %>
+                    <% } %>
+            <% } %>
+        <% } %>
+    </div>
+</body>
+</html>
