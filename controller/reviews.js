@@ -52,9 +52,9 @@ function postReview(req, res){
 }
 
 function destroy(req, res) {
-    Review.findByIdAndDelete(req.params.id, (err, deleteReview) => {
+    Review.findByIdAndRemove(req.params.id, (err, deleteReview) => {
         if (err) res.send(err);
-        res.redirect(`/reviews/${product._id}`)
+        res.redirect(`/reviews/`);
     })
 }
 
