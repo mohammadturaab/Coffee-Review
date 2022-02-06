@@ -35,8 +35,25 @@ function displaySingleReview (req, res){
     });
 }
 
+function postReview(req, res){
+    //Create reviews and reference them to product.
+    Product.findById(req.params.id, (err, product) => {
+        if (err) res.send(err);
+        const newReview = new Review({
+            text: req.body.reviewInput,
+            rating: req.body.rating,
+            product: req.params.id,
+        });
+        newReview.save();
+        product.reviews.push(newReview._id);
+        product.save((err) => {
+            res.redirect(`/reviews/${product._id}`);
+        });
+    });
+}
 
 module.exports = {
     displayReviewPage,
     displaySingleReview,
+    postReview
 }
