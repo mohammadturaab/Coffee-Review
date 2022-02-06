@@ -1,11 +1,13 @@
 const router = require('express').Router();
 const ctrl = require('../controller/reviews');
 
-router.get('/', ctrl.displayReviewPage);
+router.get('/', isLoggedIn, ctrl.displayReviewPage);
 
-router.get('/:id', ctrl.displaySingleReview);
+router.get('/:id', isLoggedIn, ctrl.displaySingleReview);
 
-router.post('/:id', ctrl.postReview);
+router.post('/:id', isLoggedIn, ctrl.postReview);
+
+router.delete("/:id", isLoggedIn, ctrl.destroy);
 
 
 module.exports = router;
