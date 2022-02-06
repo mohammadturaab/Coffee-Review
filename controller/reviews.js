@@ -7,7 +7,6 @@ function displayReviewPage(req, res){
     Product.find({}, (err, product) => {
         if(err) res.send(err);
         Review.find({}, (err, reviewFound) => {
-            console.log(reviewFound);
             if(err) res.send(err);
             res.render('products/reviews', {
                 product,
