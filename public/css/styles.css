@@ -157,19 +157,24 @@ a:hover {
     width: 30%;
     border-radius: 15%;
     box-shadow: 0 0 2px 2px var(--color-secondary);
+    text-align: center;
+    padding: 10px;
 }
 
 .card__image {
-    height: 80%;
-    width: 100%;
+    height: 60%;
+    width: 60%;
     border-radius: 15%;
 }
 
-.card__img-first {
-    background: url(../images/coffeeAndPine.jpg);
-    background-size: cover;
+.card__img {
+    overflow: hidden;
+    margin-top: 5px;
+
+    /* background: url(../images/coffeeAndPine.jpg); */
 }
 
+/* 
 .card__img-second {
     background: url(../images/espressoShot.jpg);
     background-size: cover;
@@ -178,14 +183,10 @@ a:hover {
 .card__img-third {
     background: url(../images/coffeeWithMilk.jpg);
     background-size: cover;
-}
+} */
 
 .card__text {
-    height: 20%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-transform: uppercase;
 }
 
 .card__text h3 {
