@@ -465,12 +465,28 @@ font-family: 'Poppins', sans-serif; */
 }
 
 #button1,
-#button2 {
+#button2,
+#button3 {
     float: right;
     margin-right: 10px;
 }
 
 .new--review {
-    border: 1px solid red;
     margin-top: 50px;
+}
+
+.new--review{
+    margin: 30px;
+}
+#reviewInput {
+    width: 100%;
+}
+
+.rating{
+    color: #fff;
+    background-color:#4e6e58
+}
+.rating::after{
+    color: #fff;
+    background-color:#4e6e58
 }

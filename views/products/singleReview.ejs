@@ -31,23 +31,25 @@
     </div>
     <div class="new--review">
         <form action="/reviews/<%= product._id %>" method="POST">
-            <div>
+            <!-- <div>
                 <label for="name">Name (3 to 10 characters)</label>
                 <input type="text" id="name" name="name" maxlength="10" size="12">
+            </div> -->
+            <div>
+                <h3>Write a Review</h3>
+                <textarea name="reviewInput" id="reviewInput" cols="30" rows="10"></textarea>
+            </div>
+            <div class="custom-select">
                 <label for="rating">Rating</label>
-                <select name="rating" id="rating">
+                <select class="rating" name="rating" id="rating">
                     <% for (let i = 1; i <= 5; i++){ %>
                     <option value="<%= i %>"><%= i %></option>
                     <% }%>
                 </select>
             </div>
-            <div>
-                <textarea name="reviewInput" id="reviewInput" cols="30" rows="10"></textarea>
-            </div>
-            <button class="item--review--button" type="submit">Submit</button>
+            <button class="item--review--button" id="button3" type="submit">Submit</button>
         </form>
     </div>
 </body>
-
 
 </html>
