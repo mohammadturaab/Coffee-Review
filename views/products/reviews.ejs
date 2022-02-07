@@ -3,19 +3,29 @@
 </head>
 <body>
     <%- include('../partials/nav.ejs')  %>
-    <h1>Hello there</h1>
-    <div>
+    <div class="banner-container">
+        <h1>Reviews</h1>
+    </div>
+    <div class="content-area">
+        <h2>Reviews</h2>
         <!-- Find all products with at least one review and store it -->
         <% for(let i = 0; i < product.length; i++){ %>
+            <div class="all--reviews">
             <% if(product[i].reviews.length > 0){ %>
-                    <p> <%= product[i].name %></p>
+                    <p class="item--name-review"> <%= product[i].name %> | Rating: <%= reviewFound[i].rating %></p>
+                    <div class="reviews_random">
                     <% for(let j = 0; j < reviewFound.length; j++){ %>
                             <% if(product[i].reviews.includes(reviewFound[j]._id)){ %>
-                                    <p>-<%= reviewFound[j].text %></p>
+                                    <p class="review--text">-<%= reviewFound[j].text %></p>
                             <% } %>
                     <% } %>
+                    </div>
             <% } %>
+            </div>
         <% } %>
+        <div>
+            <%- include('../partials/footer.ejs')  %>
+        </div>
     </div>
 </body>
 </html>
