@@ -12,9 +12,9 @@ router.get('/:id/:id/edit', ctrl.editReview);
 
 router.post('/:id', isLoggedIn, ctrl.postReview);
 
-router.put('/:id/:id', ctrl.updateReview);
+router.put('/:id/:id', isLoggedIn, ctrl.updateReview);
 
-router.delete("/:id", ctrl.destroy);
+router.delete("/:id", isLoggedIn, ctrl.destroy);
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
