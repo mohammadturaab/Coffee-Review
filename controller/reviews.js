@@ -42,6 +42,7 @@ function postReview(req, res){
             text: req.body.reviewInput,
             rating: req.body.rating,
             product: req.params.id,
+            user: req.user._id
         });
         newReview.save();
         product.reviews.push(newReview._id);
