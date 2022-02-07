@@ -8,20 +8,23 @@
 
     <h3>Previous rating comment: <%= reviewFound.text %></h3>
     <h4>Previous rating ranking: <%= reviewFound.rating %></h4>
-    <form action="/reviews/<%= reviewFound.product %>/<%= reviewFound._id %>?_method=PUT" method="POST">
-        <div>
-            <label for="rating">Rating</label>
-            <select name="rating" id="rating">
-                <% for (let i = 1; i <= 5; i++){ %>
-                    <option value="<%= i %>"><%= i %></option>
-                <% }%>
-            </select>
-        </div>
-        <div>
-            <textarea name="reviewInput" id="reviewInput" cols="30" rows="10"></textarea>
-        </div>
-        <button type="submit">Submit</button>
-    </form>
-
+    <% if (JSON.stringify(reviewFound.user) === JSON.stringify(user._id)) { %>
+        <form action="/reviews/<%= reviewFound.product %>/<%= reviewFound._id %>?_method=PUT" method="POST">
+            <div>
+                <label for="rating">Rating</label>
+                <select name="rating" id="rating">
+                    <% for (let i = 1; i <= 5; i++){ %>
+                        <option value="<%= i %>"><%= i %></option>
+                    <% }%>
+                </select>
+            </div>
+            <div>
+                <textarea name="reviewInput" id="reviewInput" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    <% } else { %>
+        <h3>You did not write this review and cannot modify it. Please go back and modify a review you have written.</h3>
+    <% } %>
 </body>
 </html>
