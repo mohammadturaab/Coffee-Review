@@ -52,28 +52,30 @@ function postReview(req, res){
 }
 
 function updateReview(req, res){
-        Review.findByIdAndUpdate(req.params.id, 
-            {
-                $set: {
-                    text: req.body.reviewInput,
-                    rating: req.body.rating
-                }
-            }, 
-            {new: true}, 
-            (err, reviewFound) => {
-            if(err) res.send(err);
-            res.redirect(`/reviews/${reviewFound.product}`);
-        });
+    Review.findByIdAndUpdate(req.params.id, 
+        {
+            $set: {
+                text: req.body.reviewInput,
+                rating: req.body.rating
+            }
+        }, 
+        {new: true}, 
+        (err, reviewFound) => {
+        if(err) res.send(err);
+        res.redirect(`/reviews/${reviewFound.product}`);
+    });
 }
 
 function editReview(req, res){
-        Review.findById(req.params.id, (err, reviewFound) => {
-            if(err) res.send(err);
-            res.render('products/updateReviews', {
-                user: req.user,
-                reviewFound
-            });
+    Review.findById(req.params.id, (err, reviewFound) => {
+        if(err) res.send(err);
+        res.render('products/updateReviews', {
+            user: req.user,
+            reviewFound
         });
+    });
+}
+
 function destroy(req, res) {
     Review.findByIdAndRemove(req.params.id, (err, deleteReview) => {
         if (err) res.send(err);
@@ -86,6 +88,6 @@ module.exports = {
     displaySingleReview,
     postReview,
     editReview,
-    updateReview
+    updateReview,
     destroy
 }
