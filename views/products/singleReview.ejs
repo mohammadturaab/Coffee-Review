@@ -4,33 +4,54 @@
 
 <body>
     <%- include('../partials/nav.ejs')  %>
-    <h2><%= product.name %></h2>
-    <% if(reviewFound){ %>
-        <% for(let i = 0; i < reviewFound.length; i++) { %>
-                <p>Review: <%= reviewFound[i].text %></p>
-                <a href="/reviews/<%= product._id %>/<%= reviewFound[i]._id %>/edit"><button>Update</button></a>
+    <div class="all--information">
+        <img class="review-img" src="<%= product.image %>" alt="">
+        <div class="product--information-review">
+            <h4 class="item--name-review"><%= product.name %></h4>
+            <p class="item--description-review">Description: <span
+                    class="product--description"><%= product.description %></span></p>
+            <h5 class="item--rating-review">Rating: <span class="product--rating">TBD</span></h5>
+        </div>
+    </div>
+    <div>
+        <% if(reviewFound){ %>
+        <div>
+            <% for(let i = 0; i < reviewFound.length; i++) { %>
+            <div class="all--reviews">
+                <h3 class="user-name">Reviewer:</h3>
+                <h3>Rating: <%= reviewFound[i].rating %></h3>
+                <p class="review--text"><%= reviewFound[i].text %></p>
+                <a href="/reviews/<%= product._id %>/<%= reviewFound[i]._id %>/edit"><button
+                        class="item--review--button" id="button1">Update</button></a>
                 <form action="/reviews/<%= reviewFound[i]._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete"/>
+                    <button class="item--review--button" id="button2">Delete</button></a>
                 </form>
+            </div>
+            <% } %>
+        </div>
         <% } %>
-        <% } %>
-        
+    </div>
+    <div class="new--review">
         <form action="/reviews/<%= product._id %>" method="POST">
-            <div>
+            <!-- <div>
                 <label for="name">Name (3 to 10 characters)</label>
                 <input type="text" id="name" name="name" maxlength="10" size="12">
+            </div> -->
+            <div>
+                <h3>Write a Review</h3>
+                <textarea name="reviewInput" id="reviewInput" cols="30" rows="10"></textarea>
+            </div>
+            <div class="custom-select">
                 <label for="rating">Rating</label>
-                <select name="rating" id="rating">
+                <select class="rating" name="rating" id="rating">
                     <% for (let i = 1; i <= 5; i++){ %>
                     <option value="<%= i %>"><%= i %></option>
                     <% }%>
                 </select>
             </div>
-            <div>
-                <textarea name="reviewInput" id="reviewInput" cols="30" rows="10"></textarea>
-            </div>
-            <button type="submit">Submit</button>
+            <button class="item--review--button" id="button3" type="submit">Submit</button>
         </form>
+    </div>
 </body>
 
 </html>
