@@ -450,9 +450,10 @@ font-family: 'Poppins', sans-serif; */
 }
 
 .all--reviews {
-    border: 1px solid #000;
     margin: 10px 30px 0 10px;
     padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
 }
 
 .user-name {
@@ -464,6 +465,9 @@ font-family: 'Poppins', sans-serif; */
     font-family: 'Poppins', sans-serif;
 }
 
+.line--break{
+    border-bottom: 1px solid #000;
+}
 #button1,
 #button2,
 #button3 {
@@ -484,9 +488,7 @@ font-family: 'Poppins', sans-serif; */
 
 .rating{
     color: #fff;
-    background-color:#4e6e58
+    background-color: var(--color-secondary);
+    width: 50px;
 }
-.rating::after{
-    color: #fff;
-    background-color:#4e6e58
-}
+

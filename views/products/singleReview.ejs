@@ -15,18 +15,20 @@
     </div>
     <div>
         <% if(reviewFound){ %>
-        <% for(let i = 0; i < reviewFound.length; i++) { %>
-        <div class="all--reviews">
-            <h3 class="user-name">Reviewer: <%= user.name %></h3>
-            <h3>Rating: <%= reviewFound[i].rating %></h3>
-            <p class="review--text"><%= reviewFound[i].text %></p>
-            <a href="/reviews/<%= product._id %>/<%= reviewFound[i]._id %>/edit"><button class="item--review--button"
-                    id="button1">Update</button></a>
-            <form action="/reviews/<%= reviewFound[i]._id %>?_method=DELETE" method="POST">
-                <button class="item--review--button" id="button2">Delete</button></a>
-            </form>
+        <div>
+            <% for(let i = 0; i < reviewFound.length; i++) { %>
+            <div class="all--reviews">
+                <h3 class="user-name">Reviewer:</h3>
+                <h3>Rating: <%= reviewFound[i].rating %></h3>
+                <p class="review--text"><%= reviewFound[i].text %></p>
+                <a href="/reviews/<%= product._id %>/<%= reviewFound[i]._id %>/edit"><button
+                        class="item--review--button" id="button1">Update</button></a>
+                <form action="/reviews/<%= reviewFound[i]._id %>?_method=DELETE" method="POST">
+                    <button class="item--review--button" id="button2">Delete</button></a>
+                </form>
+            </div>
+            <% } %>
         </div>
-        <% } %>
         <% } %>
     </div>
     <div class="new--review">
