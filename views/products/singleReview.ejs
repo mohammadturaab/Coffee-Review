@@ -21,24 +21,21 @@
                 <h3 class="user-name">Reviewer:</h3>
                 <h3>Rating: <%= reviewFound[i].rating %></h3>
                 <p class="review--text"><%= reviewFound[i].text %></p>
-                <a href="/reviews/<%= product._id %>/<%= reviewFound[i]._id %>/edit"><button
-                        class="item--review--button" id="button1">Update</button></a>
-                <form action="/reviews/<%= reviewFound[i]._id %>?_method=DELETE" method="POST">
-                    <button class="item--review--button" id="button2">Delete</button></a>
-                </form>
+                <% if (user && (JSON.stringify(reviewFound[i].user) === JSON.stringify(user._id))) { %>
+                    <a href="/reviews/<%= product._id %>/<%= reviewFound[i]._id %>/edit">
+                        <button class="item--review--button" id="button1">Update</button>
+                        </a>
+                    <form action="/reviews/<%= reviewFound[i]._id %>?_method=DELETE" method="POST">
+                        <button class="item--review--button" id="button2">Delete</button></a>
+                    </form>
+                <% } %>
             </div>
             <% } %>
         </div>
         <% } %>
-        <form action="/reviews/<%= product._id %>" method="POST">
-            <div>
-    </div>
+
     <div class="new--review">
         <form action="/reviews/<%= product._id %>" method="POST">
-            <!-- <div>
-                <label for="name">Name (3 to 10 characters)</label>
-                <input type="text" id="name" name="name" maxlength="10" size="12">
-            </div> -->
             <div>
                 <h3>Write a Review</h3>
                 <textarea name="reviewInput" id="reviewInput" cols="30" rows="10"></textarea>
@@ -51,7 +48,12 @@
                     <% }%>
                 </select>
             </div>
-            <button class="item--review--button" id="button3" type="submit">Submit</button>
+            <% if (user && (typeof user._id !== "undefined")) { %>
+                <button class="item--review--button" id="button3" type="submit">Submit</button>
+            <% } else { %>
+                <br>
+                <h3>=== Log In to Submit a Review ===</h3>
+            <% } %>
         </form>
     </div>
 </body>
