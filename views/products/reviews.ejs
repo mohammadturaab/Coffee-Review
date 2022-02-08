@@ -12,7 +12,7 @@
         <% for(let i = 0; i < product.length; i++){ %>
             <div class="all--reviews">
             <% if(product[i].reviews.length > 0){ %>
-                    <p class="item--name-review"> <%= product[i].name %> | Rating: <%= reviewFound[i].rating %></p>
+                    <p class="item--name-review"> <%= product[i].name %></p>
                     <div class="reviews_random">
                     <% for(let j = 0; j < reviewFound.length; j++){ %>
                             <% if(product[i].reviews.includes(reviewFound[j]._id)){ %>
