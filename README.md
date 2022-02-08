@@ -7,6 +7,12 @@ Are you a coffee lover? There is so much the world has to offer, but sometimes i
 ## Getting Started:
 Heroku Deployment: [Coffee-Review](https://nem-coffee-review.herokuapp.com/)
 
+## ERD:
+![ERD](https://user-images.githubusercontent.com/80375748/153024921-04d25d84-c7dd-43e4-991a-be4a0199592d.PNG)
+
+## User Flow
+![User Flow](https://user-images.githubusercontent.com/80375748/153024883-d4d15d42-6f3e-4157-9ad1-e307d47939d4.PNG)
+
 ## Screenshots:
 ![Home Page](https://user-images.githubusercontent.com/80375748/152928525-db688c3b-3993-43b6-b422-369588ed7ee5.png)
 ![Products Page](https://user-images.githubusercontent.com/80375748/152928805-55009420-a4bc-47e9-b068-9222abc90011.png)
@@ -22,3 +28,8 @@ Heroku Deployment: [Coffee-Review](https://nem-coffee-review.herokuapp.com/)
 - Express
 - MongoDB
 - Mongoose
+
+## Further Improvements
+- This was developed using a desktop-first approach.
+- It could be modified so that it is responsive and adapts to changes in screen size.
+- Building it from a mobile-first perspective could have provided an easy transition to desktop screen sizes.
