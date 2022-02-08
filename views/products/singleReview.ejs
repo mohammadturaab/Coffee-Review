@@ -10,7 +10,7 @@
             <h4 class="item--name-review"><%= product.name %></h4>
             <p class="item--description-review">Description: <span
                     class="product--description"><%= product.description %></span></p>
-            <h5 class="item--rating-review">Rating: <span class="product--rating">TBD</span></h5>
+            <!-- <h5 class="item--rating-review">Rating: <span class="product--rating">TBD</span></h5> -->
         </div>
     </div>
     <div>
@@ -18,7 +18,7 @@
         <div>
             <% for(let i = 0; i < reviewFound.length; i++) { %>
             <div class="all--reviews">
-                <h3>Rating: <%= reviewFound[i].rating %></h3>
+                <!-- <h3>Rating: <%= reviewFound[i].rating %></h3> -->
                 <p class="review--text"><%= reviewFound[i].text %></p>
                 <% if (user && (JSON.stringify(reviewFound[i].user) === JSON.stringify(user._id))) { %>
                 <a href="/reviews/<%= product._id %>/<%= reviewFound[i]._id %>/edit">
