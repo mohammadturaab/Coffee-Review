@@ -14,10 +14,10 @@ Heroku Deployment: [Coffee-Review](https://nem-coffee-review.herokuapp.com/)
 ![User Flow](https://user-images.githubusercontent.com/80375748/153024883-d4d15d42-6f3e-4157-9ad1-e307d47939d4.PNG)
 
 ## Screenshots:
-![Home Page](https://user-images.githubusercontent.com/80375748/152928525-db688c3b-3993-43b6-b422-369588ed7ee5.png)
-![Products Page](https://user-images.githubusercontent.com/80375748/152928805-55009420-a4bc-47e9-b068-9222abc90011.png)
-![Main Reviews Page](https://user-images.githubusercontent.com/80375748/152928822-2edafb45-dd98-46a2-9130-09fa3fabef58.png)
-![Single Product Page](https://user-images.githubusercontent.com/80375748/152928584-586ce0cd-840e-4b0c-93cd-c4704a1c2f50.png)
+![Home Page](https://user-images.githubusercontent.com/80375748/153054808-ba073e62-df44-42e2-9786-c1c2fd0bda78.png)
+![Bean Page](https://user-images.githubusercontent.com/80375748/153054912-3aacdb67-56cc-44fa-be05-0c0667f85283.png)
+![Main Reviews Page](https://user-images.githubusercontent.com/80375748/153054971-7b458f03-c175-4bc9-9666-cbaaa7cbf7a4.png)
+![Single Bean Page](https://user-images.githubusercontent.com/80375748/153055029-74465c11-3a92-4a24-80e5-3363e8f9da14.png)
 
 ## Technologies Used:
 - HTML
