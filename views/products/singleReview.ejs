@@ -18,8 +18,8 @@
         <div>
             <% for(let i = 0; i < reviewFound.length; i++) { %>
             <div class="all--reviews">
-                <!-- <h3>Rating: <%= reviewFound[i].rating %></h3> -->
                 <p class="review--text"><%= reviewFound[i].text %></p>
+                <h6>Rating: <%= reviewFound[i].rating %></h6>
                 <% if (user && (JSON.stringify(reviewFound[i].user) === JSON.stringify(user._id))) { %>
                 <a href="/reviews/<%= product._id %>/<%= reviewFound[i]._id %>/edit">
                     <button class="item--review--button" id="button1">Update</button>
