@@ -18,7 +18,7 @@ Heroku Deployment: [Coffee-Review](https://nem-coffee-review.herokuapp.com/)
 - CSS
 - JavaScript
 - EJS
-- Node.sj
+- Node.js
 - Express
 - MongoDB
 - Mongoose
