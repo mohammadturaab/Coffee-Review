@@ -21,40 +21,40 @@
                 <h3>Rating: <%= reviewFound[i].rating %></h3>
                 <p class="review--text"><%= reviewFound[i].text %></p>
                 <% if (user && (JSON.stringify(reviewFound[i].user) === JSON.stringify(user._id))) { %>
-                    <a href="/reviews/<%= product._id %>/<%= reviewFound[i]._id %>/edit">
-                        <button class="item--review--button" id="button1">Update</button>
-                        </a>
-                    <form action="/reviews/<%= reviewFound[i]._id %>?_method=DELETE" method="POST">
-                        <button class="item--review--button" id="button2">Delete</button></a>
-                    </form>
+                <a href="/reviews/<%= product._id %>/<%= reviewFound[i]._id %>/edit">
+                    <button class="item--review--button" id="button1">Update</button>
+                </a>
+                <form action="/reviews/<%= reviewFound[i]._id %>?_method=DELETE" method="POST">
+                    <button class="item--review--button" id="button2">Delete</button></a>
+                </form>
                 <% } %>
             </div>
             <% } %>
         </div>
         <% } %>
 
-    <div class="new--review">
-        <form action="/reviews/<%= product._id %>" method="POST">
-            <div>
-                <h3>Write a Review</h3>
-                <textarea name="reviewInput" id="reviewInput" cols="30" rows="10"></textarea>
-            </div>
-            <div class="custom-select">
-                <label for="rating">Rating</label>
-                <select class="rating" name="rating" id="rating">
-                    <% for (let i = 1; i <= 5; i++){ %>
-                    <option value="<%= i %>"><%= i %></option>
-                    <% }%>
-                </select>
-            </div>
-            <% if (user && (typeof user._id !== "undefined")) { %>
+        <div class="new--review">
+            <form action="/reviews/<%= product._id %>" method="POST">
+                <div>
+                    <h3>Write a Review</h3>
+                    <textarea name="reviewInput" id="reviewInput" cols="30" rows="10"></textarea>
+                </div>
+                <div class="custom-select">
+                    <label for="rating">Rating</label>
+                    <select class="rating" name="rating" id="rating">
+                        <% for (let i = 1; i <= 5; i++){ %>
+                        <option value="<%= i %>"><%= i %></option>
+                        <% }%>
+                    </select>
+                </div>
+                <% if (user && (typeof user._id !== "undefined")) { %>
                 <button class="item--review--button" id="button3" type="submit">Submit</button>
-            <% } else { %>
+                <% } else { %>
                 <br>
                 <h3>=== Log In to Submit a Review ===</h3>
-            <% } %>
-        </form>
-    </div>
+                <% } %>
+            </form>
+        </div>
 </body>
 
 </html>
