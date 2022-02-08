@@ -18,7 +18,6 @@
         <div>
             <% for(let i = 0; i < reviewFound.length; i++) { %>
             <div class="all--reviews">
-                <h3 class="user-name">Reviewer:</h3>
                 <h3>Rating: <%= reviewFound[i].rating %></h3>
                 <p class="review--text"><%= reviewFound[i].text %></p>
                 <% if (user && (JSON.stringify(reviewFound[i].user) === JSON.stringify(user._id))) { %>
