@@ -32,4 +32,4 @@ Heroku Deployment: [Coffee-Review](https://nem-coffee-review.herokuapp.com/)
 ## Further Improvements
 - This was developed using a desktop-first approach.
 - It could be modified so that it is responsive and adapts to changes in screen size.
-- Building it from a mobile-first perspective could have provided an easy transition to desktop screen sizes.
+- Other improvements include stylistic changes, and adding more diversity in the images used as a background.
