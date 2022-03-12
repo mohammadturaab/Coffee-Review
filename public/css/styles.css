@@ -506,6 +506,10 @@ a:hover {
         align-items: center;
     }
 
+    .footer__item{
+        font-size: 1.5rem;
+    }
+
     .grid{
         grid-template-columns: 1fr 1fr;
     }
@@ -559,6 +563,20 @@ a:hover {
         margin-bottom: 2rem;
     }
 
+    .footer{
+        flex-direction: row;
+    }
+
+    .footer li{
+        margin: 1rem;
+    }
+    
+    .footer__item{
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
     .grid{
         grid-template-columns: 1fr;
     }
@@ -570,7 +588,10 @@ a:hover {
     .btm__img__container{
         margin-top: 1rem;
     }
-
+    
+    .nav{
+        flex-direction: column;
+    }
     .nav__header{
         flex-direction: column;
     }
