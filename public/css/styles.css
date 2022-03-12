@@ -501,7 +501,6 @@ a:hover {
 }
 
 @media screen and (max-width: 600px){
-
     .desc--wrapper{
         flex-direction: column;
         align-items: center;
@@ -523,6 +522,18 @@ a:hover {
     .advertise{
         margin: 0 auto;
         width: 90%;
+    }
+
+    .banner-container{
+        align-items: center;
+        display: flex;
+        height: 60%;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .banner-container h1{
+        text-align: center;
     }
 
     .card{
