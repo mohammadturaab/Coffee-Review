@@ -326,7 +326,9 @@ a:hover {
 }
 
 .advertise h3 {
-    margin-bottom: 0;
+    margin: 0 1rem 2rem;
+    text-align: center;
+    line-height: 4rem;
 }
 
 .advertise h4 {
