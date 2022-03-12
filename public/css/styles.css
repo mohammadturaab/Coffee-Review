@@ -506,6 +506,10 @@ a:hover {
         align-items: center;
     }
 
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
     .wrapper__word__last::after{
         content: "\A";
         width: 1rem;
@@ -553,6 +557,10 @@ a:hover {
     .card--container{
         width: 90%;
         margin-bottom: 2rem;
+    }
+
+    .grid{
+        grid-template-columns: 1fr;
     }
 
     h3{
