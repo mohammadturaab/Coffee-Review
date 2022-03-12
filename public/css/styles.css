@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-    font-size: 8rem;
+    font-size: 7rem;
 }
 
 h2 {
@@ -126,6 +126,10 @@ a:hover {
 .video__button:hover {
     color: var(--color-accent);
     transition: color 0.15s;
+}
+
+.video--content h1{
+    text-align: center;
 }
 
 .card {
@@ -484,3 +488,56 @@ a:hover {
     margin-left: 30px;
 }
 
+@media screen and (max-width: 1025px){
+    .video--content h1{
+        font-size: 5.8rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .desc--wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper__word__last::after{
+        content: "\A";
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: var(--color-secondary);
+        margin: 0 3rem;
+        display: inline-block;
+        opacity: 0.6;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .advertise{
+        margin: 0;
+    }
+
+    h3{
+        font-size: 1.7rem;
+    }
+
+    .btm__img__container{
+        margin-top: 1rem;
+    }
+
+    .video__button{
+        font-size: 1.8rem;
+        margin: 1rem;
+        padding: 1rem;
+        width: 70%;
+    }
+
+    .video--content h1{
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+
+    .wrapper__word{
+        font-size: 1.5rem;
+    }
+}
