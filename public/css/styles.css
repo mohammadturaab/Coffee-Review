@@ -155,7 +155,7 @@ a:hover {
 }
 
 .card--container {
-    height: 90%;
+    height: auto;
     width: 30%;
     border-radius: 15%;
     box-shadow: 0 0 2px 2px var(--color-secondary);
@@ -321,7 +321,7 @@ a:hover {
     background-color: rgb(247, 160, 114, 20%);
     color: var(--color-primary);
     border-radius: 10%;
-    margin: 5rem 8rem;
+    margin: 8rem;
     padding: 3rem 0;
 }
 
@@ -489,12 +489,19 @@ a:hover {
 }
 
 @media screen and (max-width: 1025px){
+    .card--container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
     .video--content h1{
         font-size: 5.8rem;
     }
 }
 
 @media screen and (max-width: 600px){
+
     .desc--wrapper{
         flex-direction: column;
         align-items: center;
@@ -512,9 +519,24 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 400px){
     .advertise{
-        margin: 0;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .card{
+        height: auto;
+    }
+
+    .card--section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card--container{
+        width: 90%;
+        margin-bottom: 2rem;
     }
 
     h3{
