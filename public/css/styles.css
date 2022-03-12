@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-    font-size: 8rem;
+    font-size: 7rem;
 }
 
 h2 {
@@ -128,6 +128,10 @@ a:hover {
     transition: color 0.15s;
 }
 
+.video--content h1{
+    text-align: center;
+}
+
 .card {
     height: 600px;
     width: 100%;
@@ -151,7 +155,7 @@ a:hover {
 }
 
 .card--container {
-    height: 90%;
+    height: auto;
     width: 30%;
     border-radius: 15%;
     box-shadow: 0 0 2px 2px var(--color-secondary);
@@ -317,7 +321,7 @@ a:hover {
     background-color: rgb(247, 160, 114, 20%);
     color: var(--color-primary);
     border-radius: 10%;
-    margin: 5rem 8rem;
+    margin: 8rem;
     padding: 3rem 0;
 }
 
@@ -326,7 +330,9 @@ a:hover {
 }
 
 .advertise h3 {
-    margin-bottom: 0;
+    margin: 0 1rem 2rem;
+    text-align: center;
+    line-height: 4rem;
 }
 
 .advertise h4 {
@@ -482,3 +488,146 @@ a:hover {
     margin-left: 30px;
 }
 
+@media screen and (max-width: 1025px){
+    .card--container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .video--content h1{
+        font-size: 5.8rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .desc--wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__item{
+        font-size: 1.5rem;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wrapper__word__last::after{
+        content: "\A";
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: var(--color-secondary);
+        margin: 0 3rem;
+        display: inline-block;
+        opacity: 0.6;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .advertise{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .banner-container{
+        align-items: center;
+        display: flex;
+        height: 60%;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .banner-container h1{
+        text-align: center;
+    }
+
+    .card{
+        height: auto;
+    }
+
+    .card h2{
+        font-size: 2.2rem;
+        margin: 0;
+    }
+
+    .card--section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card--container{
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    .footer{
+        flex-direction: row;
+    }
+
+    .footer li{
+        margin: 1rem;
+    }
+    
+    .footer__item{
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .grid{
+        grid-template-columns: 1fr;
+    }
+
+    h3{
+        font-size: 1.7rem;
+    }
+
+    .btm__img__container{
+        margin-top: 1rem;
+    }
+    
+    .nav{
+        flex-direction: column;
+    }
+    .nav__header{
+        flex-direction: column;
+    }
+
+    .nav__item{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .nav__list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__title{
+        text-align: center;
+    }
+
+    .parallax--effect-video{
+        height: auto;
+        margin-top: 3rem;
+    }
+
+    .video__button{
+        font-size: 1.8rem;
+        margin: 2rem;
+        padding: 1rem;
+        width: 70%;
+    }
+
+    .video--content h1{
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+
+    .wrapper__word{
+        font-size: 1.5rem;
+    }
+}
