@@ -501,6 +501,10 @@ a:hover {
 }
 
 @media screen and (max-width: 600px){
+    .all--information{
+        flex-direction: column;
+    }
+    
     .desc--wrapper{
         flex-direction: column;
         align-items: center;
@@ -512,6 +516,10 @@ a:hover {
 
     .grid{
         grid-template-columns: 1fr 1fr;
+    }
+
+    .product--information-review{
+        width: 80%;
     }
 
     .wrapper__word__last::after{
