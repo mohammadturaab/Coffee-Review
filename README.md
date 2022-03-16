@@ -29,7 +29,6 @@ Heroku Deployment: [Coffee-Review](https://nem-coffee-review.herokuapp.com/)
 - MongoDB
 - Mongoose
 
-## Further Improvements
-- This was developed using a desktop-first approach.
-- It could be modified so that it is responsive and adapts to changes in screen size.
-- Other improvements include stylistic changes, and adding more diversity in the images used as a background.
+## Further Improvements (Things To Work On)
+- Unit and integration testing
+- Currently uses vanilla CSS. Inclusion of a CSS library/framework for stylistic consistency can be investigated.
