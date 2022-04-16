@@ -14,7 +14,6 @@ Heroku Deployment: [Coffee-Review](https://nem-coffee-review.herokuapp.com/)
 ![User Flow](https://user-images.githubusercontent.com/80375748/153024883-d4d15d42-6f3e-4157-9ad1-e307d47939d4.PNG)
 
 ## Screenshots:
-<img width="469" alt="ERD" src="https://user-images.githubusercontent.com/80375748/163689727-8c0d3ef3-62ce-44f8-8e6a-e62919ca52e8.PNG">
 ![Home Page](https://user-images.githubusercontent.com/80375748/153054808-ba073e62-df44-42e2-9786-c1c2fd0bda78.png)
 ![Bean Page](https://user-images.githubusercontent.com/80375748/153054912-3aacdb67-56cc-44fa-be05-0c0667f85283.png)
 ![Main Reviews Page](https://user-images.githubusercontent.com/80375748/153054971-7b458f03-c175-4bc9-9666-cbaaa7cbf7a4.png)
